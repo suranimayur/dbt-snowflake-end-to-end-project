@@ -1,0 +1,7 @@
+dbt-core
+dbt-snowflake
+dbt-databricks
+pandas
+numpy
+ipykernel
+python-dotenv

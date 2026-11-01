@@ -1,0 +1,67 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw Airbnb-style source data, loaded externally into RAW_DB.RAW_SCHEMA."
+    database: raw_db
+    schema: raw_schema
+
+    tables:
+      - name: hosts
+        identifier: raw_hosts
+        description: "One row per host."
+        config:
+          # raw_hosts has a real row-update timestamp, so freshness here
+          # measures when the data was last loaded/updated.
+          loaded_at_field: updated_at
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+        columns:
+          - name: id
+            description: "Primary key. Unique per host."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: listings
+        identifier: raw_listings
+        description: "One row per listing."
+        columns:
+          - name: id
+            description: "Primary key. Unique per listing."
+            data_tests:
+              - unique
+              - not_null
+          - name: host_id
+            description: "Foreign key to raw_hosts.id."
+            data_tests:
+              - not_null
+
+      - name: reviews
+        identifier: raw_reviews
+        config:
+          # raw_reviews has no load/updated timestamp, so `date` (the review
+          # timestamp) is only a proxy for data recency.
+          loaded_at_field: date
+          freshness:
+            # The raw data is a static snapshot whose newest review is from
+            # 2021-10-22, so hour-scale thresholds report STALE by design.
+            # These wider thresholds fail only if the snapshot is refreshed
+            # with something unexpectedly old.
+            warn_after: {count: 2190, period: day}
+            error_after: {count: 3650, period: day}
+        description: >
+          One row per review. There is no surrogate key; a listing can have
+          many reviews, so listing_id is intentionally NOT tested for uniqueness.
+        columns:
+          - name: listing_id
+            description: "Foreign key to raw_listings.id. Not unique by design."
+            data_tests:
+              - not_null
+          - name: date
+            data_tests:
+              - not_null
+          - name: reviewer_name
+            data_tests:
+              - not_null
