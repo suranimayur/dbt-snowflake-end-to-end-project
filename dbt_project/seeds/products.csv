@@ -1,0 +1,32 @@
+product_id,product_name,category,brand,unit_price,supplier_name
+1,Laptop,Electronics,Adidas,712.98,Murray and Sons
+2,Smartphone,Electronics,Nike,427.57,Schwartz Ltd
+3,Tablet,Electronics,Nike,543.53,"Ortiz, Levy and Chang"
+4,Monitor,Electronics,Sony,1762.01,"Orr, Ramos and Mathis"
+5,,Electronics,Apple,1532.6,"Murillo, Flores and Bradshaw"
+6,Microwave,Home Appliances,Dell,1347,Salas LLC
+7,Air Fryer,Home Appliances,HP,429.42,Thompson Inc
+8,Vacuum Cleaner,,Adidas,693.12,Smith LLC
+9,Coffee Maker,Home Appliances,HP,1719.42,Ward Inc
+10,Mixer,Home Appliances,Samsung,591.89,Mason-Lyons
+11,,Sports,Samsung,2017.49,"Knight, Davis and Flores"
+12,Yoga Mat,Sports,Adidas,687.66,
+13,Dumbbells,Sports,HP,2285.01,Cardenas Ltd
+14,,Sports,Nike,551.25,Harris Group
+15,Cricket Kit,Sports,Philips,1004.19,Morales-Chen
+16,Jacket,Fashion,Philips,378.61,Molina-Mcintosh
+17,Sneakers,Fashion,,635.4,"Hicks, Walker and Robinson"
+18,Backpack,Fashion,Sony,1873.86,"Mays, Nguyen and Molina"
+19,Watch,Fashion,Adidas,2247.11,Richard PLC
+20,Sunglasses,Fashion,Adidas,920.94,Figueroa PLC
+21,Printer,Office,Dell,1286.08,Mcknight and Sons
+22,,Office,Apple,1895.56,Newman-Cunningham
+23,Desk Lamp,Office,Apple,403.28,"Morris, Brock and Dyer"
+24,Keyboard,Office,Dell,1985.4,"English, Watkins and Hampton"
+25,Mouse,Office,Adidas,1501.11,"Young, Graham and Murphy"
+1,Laptop,Electronics,Adidas,712.98,Murray and Sons
+15,Cricket Kit,Sports,Philips,1004.19,Morales-Chen
+6,Microwave,Home Appliances,Dell,1347,Salas LLC
+7,Air Fryer,Home Appliances,HP,429.42,Thompson Inc
+17,Sneakers,Fashion,,635.4,"Hicks, Walker and Robinson"
+18,Backpack,Fashion,Sony,1873.86,"Mays, Nguyen and Molina"

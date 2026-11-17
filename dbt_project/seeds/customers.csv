@@ -1,0 +1,60 @@
+customer_id,customer_name,email,phone,city,state,registration_date,customer_status
+1,Mr. Devin Jackson,sanderscarla@example.net,(694)599-9985x9016,Lake Angelaville,Maryland,4/30/2025,Active
+2,Steven Burgess,rioscynthia@example.org,349-550-4377x08865,Port Linda,Kansas,1/11/2026,Active
+3,Sara Jordan,ashley73@example.org,001-335-821-6559x60666,Port Mary,New York,9/7/2024,Active
+4,Adrienne Perry,chloewalker@example.com,359.784.9561,Jacksontown,Kentucky,7/4/2024,Active
+5,Brittany Blankenship,oliverchristina@example.net,2754265197,Martinezfurt,Maine,2/9/2026,Active
+6,Kathleen Morrison,mbell@example.org,-8012,Michaeltown,Kansas,12/31/2025,Active
+7,Erica Gonzalez,michael82@example.org,+1-508-421-8862x62531,North Kevin,Maryland,5/8/2024,Active
+8,Stephen Wallace,nguyenlucas@example.com,615.769.9401x7041,Port Jennifer,Maine,1/25/2025,Active
+9,David Gallagher,phillip45@example.net,001-537-589-5011x83955,Georgechester,Delaware,10/5/2023,Inactive
+10,Rebecca Farmer,heather13@example.net,841-494-4815x535,Jenniferchester,California,4/13/2025,Active
+11,Duane Holmes,william88@example.org,534.761.0674,Lake Anthony,Texas,4/25/2026,Active
+12,Tina Scott,dale65@example.org,341.851.9217,South Kathleen,Illinois,11/7/2025,Active
+13,Robert Bell,hoffmanrobert@example.com,612.469.2559x3052,North Charleshaven,Indiana,3/11/2024,Active
+14,Tammy Combs,martinbrown@example.net,-6414,Rossmouth,Minnesota,4/28/2026,Active
+15,Franklin Crawford,albert16@example.org,530-418-5862,Davisberg,Arizona,11/13/2023,Active
+16,Lucas Thomas,mrichards@example.org,001-728-981-8738,Jonesport,North Carolina,1/12/2024,Active
+17,Nicholas Sanchez,mgould@example.net,+1-764-745-0795x52507,Bobbyhaven,Washington,9/1/2024,Inactive
+18,Robert Glass,rhonda99@example.net,001-457-562-9623x203,,South Dakota,4/24/2023,Active
+19,,rbond@example.com,(864)613-4525,Jasonton,Hawaii,8/19/2023,Inactive
+20,Angela Daniels,lisa97@example.org,+1-274-930-0252x079,Josephside,Washington,2/20/2026,Active
+21,Kayla Ramirez,walkeralan@example.net,-4994,Lake Justin,Washington,9/18/2023,Active
+22,,nathanhenry@example.net,-6669,Jessefort,,2/6/2024,Active
+23,Kristi Mayo,barrettwilliam@example.org,(469)438-9590x042,Walkerhaven,Iowa,10/25/2023,Inactive
+24,Bailey Berg,collinsanthony@example.org,+1-570-553-4233x473,Sampsonburgh,New Mexico,8/31/2024,Active
+25,Nicole Kennedy MD,,001-476-673-9230x57826,West Chelsea,Alaska,1/31/2023,Active
+26,David French,michael01@example.net,449.250.8589x757,Watersmouth,Virginia,5/12/2026,Active
+27,,michelle27@example.net,(517)865-8783,Priceshire,South Carolina,5/15/2023,Active
+28,Jason Miranda,lawrencecarolyn@example.net,001-294-696-3100,Robertborough,California,11/24/2024,Active
+29,Heather Curtis,hannah77@example.org,(642)762-0767x257,Josephberg,South Dakota,7/15/2023,Active
+30,Bianca Stewart,kathy50@example.org,7138210996,Lake Patricia,West Virginia,2/28/2026,Active
+31,Nicolas Johns,lindsaymurray@example.org,839.501.2491x03623,New Lesliebury,Kansas,4/9/2026,Inactive
+32,Nicholas Williamson,jason37@example.com,672.329.5519x2533,Monicaside,Nevada,5/17/2026,Active
+33,Morgan Boyer,maria36@example.net,9042882279,Lyonsburgh,South Carolina,12/15/2024,Active
+34,Andrea Robinson,lthornton@example.com,001-742-442-2628x1294,Tracyland,New Hampshire,10/4/2025,Active
+35,James Mckinney,jjames@example.org,+1-888-842-3109x849,Port Sarah,West Virginia,10/24/2024,Active
+36,,ufrench@example.org,617-938-8597x9421,South Kyleburgh,California,2/4/2024,Active
+37,Denise Hill,denniswalsh@example.net,614-395-8750x54439,South Brenda,Indiana,12/2/2025,Inactive
+38,Matthew Rivera MD,jweiss@example.org,,,Montana,6/2/2024,Active
+39,Megan Williams,gjones@example.com,001-412-928-9340x628,Sharonfurt,Alaska,7/23/2025,Inactive
+40,,susanpacheco@example.com,-9378,Jenniferside,Iowa,7/7/2025,Active
+41,Jennifer Pace,bretthansen@example.org,389-689-6879x30533,Mauriceport,Tennessee,11/25/2023,Active
+42,Daisy Walker,gibsonthomas@example.net,(484)890-9054,South Thomas,Virginia,10/9/2025,Active
+43,Michael Barry,anita76@example.org,001-309-487-1301x92311,Port Kellyborough,Texas,5/6/2026,
+44,Tony Burnett,zrivera@example.com,(540)980-5735x6825,Lake Michaelabury,Ohio,1/4/2024,Active
+45,Steven Delgado,wilkersonwalter@example.org,588-804-1680,New Timothyfort,South Carolina,2/16/2024,Active
+46,Frank Bentley,wilsonpatrick@example.com,001-624-434-6408,Mossport,Oregon,1/3/2025,Active
+47,,ochaney@example.org,001-245-252-9676x8326,Obrienbury,Oregon,12/20/2023,Active
+48,Joann Torres,jpineda@example.com,-3740,Ashleyfort,New York,3/5/2025,Active
+49,Sean Jordan,andersonlaura@example.net,(254)938-1306x83032,Port Kimberly,North Dakota,5/8/2025,Active
+50,Gerald Hicks,wrightdavid@example.org,(687)549-5583x35442,Jenniferhaven,Nevada,5/5/2024,Active
+1,Mr. Devin Jackson,sanderscarla@example.net,(694)599-9985x9016,Lake Angelaville,Maryland,4/30/2025,Active
+2,Steven Burgess,rioscynthia@example.org,349-550-4377x08865,Port Linda,Kansas,1/11/2026,Active
+3,Sara Jordan,ashley73@example.org,001-335-821-6559x60666,Port Mary,New York,9/7/2024,Active
+4,Adrienne Perry,chloewalker@example.com,359.784.9561,Jacksontown,Kentucky,7/4/2024,Active
+5,Brittany Blankenship,oliverchristina@example.net,2754265197,Martinezfurt,Maine,2/9/2026,Active
+6,Kathleen Morrison,mbell@example.org,-8012,Michaeltown,Kansas,12/31/2025,Active
+44,Tony Burnett,zrivera@example.com,(540)980-5735x6825,Lake Michaelabury,Ohio,1/4/2024,Active
+45,,wilkersonwalter@example.org,588-804-1680,New Timothyfort,South Carolina,2/16/2024,Active
+46,Frank Bentley,wilsonpatrick@example.com,001-624-434-6408,Mossport,Oregon,1/3/2025,Active
