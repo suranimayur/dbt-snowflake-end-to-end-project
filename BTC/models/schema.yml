@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_btc
+    description: "This is a staging model for BTC data."
+    columns:
+      - name: BLOCK_TIMESTAMP
+        description: "The timestamp of the block."
+      - name: HASH_KEY
+        tests:
+          - not_null
+          - unique
