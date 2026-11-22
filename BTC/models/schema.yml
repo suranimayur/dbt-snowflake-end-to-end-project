@@ -1,3 +1,4 @@
+
 version: 2
 
 models:
@@ -6,7 +7,68 @@ models:
     columns:
       - name: BLOCK_TIMESTAMP
         description: "The timestamp of the block."
+
       - name: HASH_KEY
-        tests:
+        description: "Unique transaction hash."
+        data_tests:
           - not_null
           - unique
+
+  - name: whale_alert
+    latest_version: 1
+    description: "Aggregated BTC whale transactions."
+
+    config:
+      contract:
+        enforced: true
+
+    columns:
+      - name: output_address
+        data_type: string
+        data_tests:
+          - assert_valid_btc_address
+
+      - name: total_sent
+        data_type: float
+
+      - name: txn_count
+        data_type: int
+
+      - name: total_sent_usd
+        data_type: float
+
+    versions:
+      - v: 1
+        deprecation_date: 2027-09-30
+        config:
+          enabled: true
+
+      - v: 2
+        columns:
+          - include: all
+            exclude:
+              - total_sent_usd
+
+  - name: stg_btc_outputs
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: ref('stg_btc_outputs_py')
+
+exposures:
+  - name: btc_whale_alerts_dashboard
+    label: BTC Whale Alerts
+    type: dashboard
+    maturity: high
+
+    url: https://datastudio.google.com/reporting/cb6eb547-ce82-4590-a945-747d9968bb26
+
+    description: >
+      BTC Whale Alert Transactions report.
+
+    depends_on:
+      - ref('whale_alert', v=1)
+
+    owner:
+      name: Mayurkumar Surani
+      email: surani.mayur@gmail.com
