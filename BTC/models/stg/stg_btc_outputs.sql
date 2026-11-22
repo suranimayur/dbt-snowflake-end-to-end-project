@@ -1,7 +1,8 @@
 
 {{ config(
     materialized='incremental',
-    strategy='append') 
+    incremental_strategy='delete+insert',
+    unique_key='hash_key') 
 }}
 
 
