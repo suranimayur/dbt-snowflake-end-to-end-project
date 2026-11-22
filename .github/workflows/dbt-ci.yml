@@ -59,3 +59,14 @@ jobs:
 
       - name: dbt run
         run: dbt run --project-dir BTC
+
+      # Runs only when something failed: shows the profile structure (no secrets)
+      - name: Diagnose profile
+        if: failure()
+        run: |
+          echo "--- profiles.yml top-level keys ---"
+          grep -E '^[A-Za-z0-9_.-]+:' ~/.dbt/profiles.yml || echo "(no top-level keys)"
+          echo "--- profile BTC defined? ---"
+          grep -qE '^BTC:' ~/.dbt/profiles.yml && echo yes || echo no
+          echo "--- private key header ---"
+          head -n 1 ~/.dbt/rsa_key
