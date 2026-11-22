@@ -1,0 +1,60 @@
+name: dbt CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: dbt-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  dbt:
+    name: dbt build
+    runs-on: ubuntu-latest
+    environment: DBT_BTC
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dbt
+        run: pip install dbt-core==1.12.6 dbt-snowflake==1.12.5
+
+      # The profile is committed at BTC/profiles.yml; only the key is secret
+      - name: Write Snowflake private key
+        env:
+          DBT_PRIVATE_KEY: ${{ secrets.DBT_PRIVATE_KEY }}
+        run: |
+          test -n "$DBT_PRIVATE_KEY" || { echo "::error::Secret DBT_PRIVATE_KEY is missing"; exit 1; }
+          mkdir -p ~/.dbt
+          printf '%s\n' "$DBT_PRIVATE_KEY" > ~/.dbt/rsa_key
+          chmod 600 ~/.dbt/rsa_key
+
+      - name: dbt deps
+        run: dbt deps --project-dir BTC
+
+      - name: dbt debug
+        run: dbt debug --project-dir BTC --profiles-dir BTC
+
+      - name: dbt run
+        run: dbt run --project-dir BTC --profiles-dir BTC
+
+      # Runs only when something failed: shows the profile structure (no secrets)
+      - name: Diagnose profile
+        if: failure()
+        run: |
+          echo "--- profiles.yml top-level keys ---"
+          grep -E '^[A-Za-z0-9_.-]+:' BTC/profiles.yml || echo "(no top-level keys)"
+          echo "--- profile BTC defined? ---"
+          grep -qE '^BTC:' BTC/profiles.yml && echo yes || echo no
+          echo "--- private key header ---"
+          head -n 1 ~/.dbt/rsa_key

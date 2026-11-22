@@ -1,0 +1,48 @@
+BTC:
+  outputs:
+    dev:
+      account: MKNOBGE-MW11651
+      database: BTC
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH', '/home/runner/.dbt/rsa_key') }}"
+      role: ACCOUNTADMIN
+      schema: BTC_MAYUR
+      threads: 3
+      type: snowflake
+      user: SURANI001
+      warehouse: COMPUTE_WH
+
+    prod:
+      account: MKNOBGE-MW11651
+      database: BTC
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH', '/home/runner/.dbt/rsa_key') }}"
+      role: ACCOUNTADMIN
+      schema: prod
+      threads: 3
+      type: snowflake
+      user: SURANI001
+      warehouse: COMPUTE_WH
+
+    dev2:
+      account: MKNOBGE-MW11651
+      database: BTC
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH', '/home/runner/.dbt/rsa_key') }}"
+      role: ACCOUNTADMIN
+      schema: BTC_SURANI
+      threads: 3
+      type: snowflake
+      user: SURANI001
+      warehouse: COMPUTE_WH
+  target: dev2
+dbt_project:
+  outputs:
+    dev:
+      account: MKNOBGE-MW11651
+      database: dbt_landing_db
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      schema: dbt_landing_schema
+      threads: 5
+      type: snowflake
+      user: SURANI001
+      warehouse: COMPUTE_WH
+  target: dev
