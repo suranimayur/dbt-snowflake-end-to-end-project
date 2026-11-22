@@ -1,0 +1,14 @@
+BTC:
+  target: dev2
+  outputs:
+    dev2:
+      type: snowflake
+      account: MKNOBGE-MW11651
+      user: SURANI001
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: BTC
+      schema: BTC_SURANI
+      threads: 3
+      # CI writes the key from the DBT_PRIVATE_KEY secret to this path
+      private_key_path: /home/runner/.dbt/rsa_key

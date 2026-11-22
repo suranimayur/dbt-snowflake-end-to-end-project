@@ -16,6 +16,8 @@ wheels/
 .freebuff
 
 # dbt credentials - never commit
-profiles.yml
 *.p8
 rsa_key*
+profiles.yml
+# ...except the non-secret CI profile, which contains no credentials
+!BTC/profiles.yml
